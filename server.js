@@ -13,9 +13,9 @@ app.post('/api/v1/analytics/', async (req, res) => {
   let data = {}
   let meetingId, language, token
   meetingId = req.body.meeting_id
-  language = req.body.language
+  language = req.body.language ? req.body.language : "en"
   try {
-     token = await fs.readdirSync(`/usr/src/app/learning-dashboard/s${meetingId}`)
+     token = await fs.readdirSync(`/usr/src/app/learning-dashboard/${meetingId}`)
      data["analytics_url"] = `${BASE_URL}/learning-dashboard/?meeting=${meetingId}&report=${token}&lang=${language}`
      await  res.json(data);
     } catch (e) {
