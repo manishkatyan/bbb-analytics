@@ -1,0 +1,11 @@
+version: '3.2'
+services:
+    analytics:
+        environment:
+            - BASE_URL='https://analytics.url.com'
+        container_name: analytics-api
+        volumes:
+            - /var/bigbluebutton/learning-dashboard/:/usr/src/app/learning-dashboard/
+        image: analytics:v1
+        ports:
+            - "3000:3000"
