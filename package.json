@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "BigBlueButton Analytics",
   "main": ".eslintrc.js",
-  "scripts": {
-    "test": " node exportData.js &&  sudo mkdir -p /var/www/bigbluebutton-default/analytics && sudo  cp -r ./index.html ./data.json ./favicon.ico /var/www/bigbluebutton-default/analytics"
+  "bin": {
+    "bbb-analytics": "./bin/index.js"
   },
+  "scripts": {},
   "author": "Asyncweb.io",
   "license": "ISC",
   "dependencies": {
-    "fs-extra": "^10.0.1"
+    "fs-extra": "^10.0.1",
+    "yargs": "^17.3.1"
   }
 }

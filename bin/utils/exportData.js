@@ -1,5 +1,8 @@
+#!/usr/bin/env node
+
 const fs = require('fs-extra')
 const ANALYTICS_FOLDER_PATH = '/var/bigbluebutton/learning-dashboard'
+
 const data = {
     analytics: []
 }
@@ -15,4 +18,3 @@ fs.readdirSync(ANALYTICS_FOLDER_PATH).filter(function (meetingId) {
     }
 })
 fs.writeJsonSync('./data.json', data)
-
