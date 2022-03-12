@@ -1,0 +1,14 @@
+{
+  "name": "bbb-analytics",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "prepare": " node exportData.js &&  sudo mkdir -p /var/www/bigbluebutton-default/analytics && sudo  cp -r ./index.html ./data.json ./favicon.ico /var/www/bigbluebutton-default/analytics"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^10.0.1"
+  }
+}
