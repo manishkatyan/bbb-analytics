@@ -1,6 +1,6 @@
 {
   "name": "bigbluebutton-analytics",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "BigBlueButton Analytics",
   "main": ".eslintrc.js",
   "bin": {
