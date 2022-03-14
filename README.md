@@ -16,8 +16,7 @@
 ---
 
 <div style="margin: 20px 0" align="center">
-  <img style="width: 100%; height: auto;" src="assets/bbb-classes.png" alt="bbb-class" /> <br/>
-  <img style="width: 100%; height: auto;" src="assets/bbb-meeting.png" alt="bbb-meeting" />
+  <img style="width: 100%; height: auto;" src="assets/bbb-classes.png" alt="bigbluebutton-analytics" /> <br/>
 </div>
 
 <br/>
