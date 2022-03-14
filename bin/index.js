@@ -4,7 +4,6 @@ const { spawn, exec } = require("child_process");
 const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers');
 const { exit } = require("process");
-const { path } = require("express/lib/application");
 const argv = yargs(hideBin(process.argv)).argv
 let PATH = '/usr/lib/node_modules/bigbluebutton-analytics'
 
