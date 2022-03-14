@@ -17,4 +17,4 @@ fs.readdirSync(ANALYTICS_FOLDER_PATH).filter(function (meetingId) {
         }
     }
 })
-fs.writeJsonSync('./data.json', data)
+fs.writeJsonSync('/var/www/bigbluebutton-default/analytics/data.json', data)
