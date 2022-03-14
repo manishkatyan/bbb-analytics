@@ -1,17 +1,21 @@
 #!/usr/bin/env node
 
-const { spawn } = require("child_process");
+const { spawn, exec } = require("child_process");
 const yargs = require('yargs/yargs')
 const { hideBin } = require('yargs/helpers');
 const { exit } = require("process");
+const { path } = require("express/lib/application");
 const argv = yargs(hideBin(process.argv)).argv
+let PATH = '/usr/local/lib/node_modules/bigbluebutton-analytics'
+
+
 try {
     if (!argv.deploy && !argv.username && !argv.password && !argv["add-user"]) {
         console.log("Please provide atleast one argument")
         process.exit()
     }
     if (argv.deploy) {
-        excuteCmd(['./bin/utils/post_install.sh'])
+        excuteCmd([`${PATH}/bin/utils/post_install.sh`])
     }
 
     if (argv["add-user"]) {

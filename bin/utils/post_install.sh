@@ -3,8 +3,11 @@ BIGBLUEBUTTON="/etc/bigbluebutton/bigbluebutton-release"
 HTPASSED="/etc/nginx/.htpasswd"
 POST_EVENT_SCRIPT="/usr/local/bigbluebutton/core/scripts/post_events/update_analytics_data.rb"
 NGINX_CONFIG="/etc/bigbluebutton/analytics-dashboard.nginx"
-ROOT_PATH="$(npm root -g)/bigbluebutton-analytics"
+ROOT_PATH="/usr/local/lib/node_modules/bigbluebutton-analytics"
 
+if [[ $(id -u) -ne 0 ]] ; then 
+    echo "Please run as root" ; exit 1 ;
+fi
 
 #set default user and password
 if [ ! -f $HTPASSED ]; then
