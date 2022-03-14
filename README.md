@@ -42,23 +42,6 @@ bbb-analytics --deploy
 
 ```
 
-After successful installation you've to configure the nginx:
-
-```bash
-# add nginx config
-touch /etc/bigbluebutton/nginx/analytics-dashboard.nginx
-
-#copy below code into  /etc/bigbluebutton/nginx/analytics-dashboard.nginx
-location /analytics {
-    auth_basic "Restricted Content";
-    auth_basic_user_file /etc/nginx/.htpasswd;
-    root /var/www/bigbluebutton-default/;
-}
-
-#verify and reload nginx config
-nginx -t && nginx -s reload
- ``` 
-
 
 After succussfull installtion you should be able to access **https://<bbb.example.com/analytics/>**
 ## default login details
@@ -68,7 +51,7 @@ After succussfull installtion you should be able to access **https://<bbb.exampl
 
 ```bash
 #To create or update username/password
-bbb-analytics --username=<username> --password=<password>
+bbb-analytics --add-user --username=<username> --password=<password>
 ```
 
 Enjoy 🎉

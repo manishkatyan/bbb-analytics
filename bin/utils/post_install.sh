@@ -2,7 +2,7 @@
 BIGBLUEBUTTON="/etc/bigbluebutton/bigbluebutton-release"
 HTPASSED="/etc/nginx/.htpasswd"
 POST_EVENT_SCRIPT="/usr/local/bigbluebutton/core/scripts/post_events/update_analytics_data.rb"
-NGINX_CONFIG="/etc/bigbluebutton/analytics.nginx"
+NGINX_CONFIG="/etc/bigbluebutton/analytics-dashboard.nginx"
 
 
 #set default user and password
