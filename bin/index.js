@@ -6,7 +6,7 @@ const { hideBin } = require('yargs/helpers');
 const { exit } = require("process");
 const { path } = require("express/lib/application");
 const argv = yargs(hideBin(process.argv)).argv
-let PATH = '/usr/local/lib/node_modules/bigbluebutton-analytics'
+let PATH = '/usr/lib/node_modules/bigbluebutton-analytics'
 
 
 try {
