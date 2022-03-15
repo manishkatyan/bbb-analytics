@@ -41,7 +41,11 @@
                                     <th scope="row">{i + 1}</th>
                                     <td>{d.name}</td>
                                     <td>{d.createdOn}</td>
-                                    <td><a href={`/learning-analytics-dashboard/?meeting=${d.meetingId}&report=${d.token}`} >View</a></td>
+                                    <td>{d.endedOn}</td>
+                                    <td className="d-flex flex-column">
+                                        <a href={`/learning-analytics-dashboard/?meeting=${d.meetingId}&report=${d.token}`} >View analytics</a>
+                                        <a href={`/playback/presentation/2.3/${d.meetingId}`} >View recording</a>
+                                    </td>
                                 </tr>
                             )}
                         </tbody>

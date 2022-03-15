@@ -12,9 +12,15 @@ fs.readdirSync(ANALYTICS_FOLDER_PATH).filter(function (meetingId) {
     if (meetingId.length > 40) {
         token = fs.readdirSync(`${ANALYTICS_FOLDER_PATH}/${meetingId}`)
         if (token) {
-            const name = fs.readJsonSync(`${ANALYTICS_FOLDER_PATH}/${meetingId}/${token[0]}/learning_dashboard_data.json`).name
-            const createdOn = new Date(fs.readJsonSync(`${ANALYTICS_FOLDER_PATH}/${meetingId}/${token[0]}/learning_dashboard_data.json`).createdOn).toLocaleString()
-            data.analytics.push({ name, createdOn, token: token[0], meetingId })
+            const raw_data = fs.readJsonSync(`${ANALYTICS_FOLDER_PATH}/${meetingId}/${token[0]}/learning_dashboard_data.json`)
+
+            const name = raw_data.name
+
+            const createdOn = new Date(raw_data.createdOn).toLocaleString()
+
+            const endedOn = new Date(raw_data.endedOn).toLocaleString()
+
+            data.analytics.push({ name, createdOn, endedOn, token: token[0], meetingId })
         }
     }
 })

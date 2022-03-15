@@ -10,7 +10,17 @@ let PATH = '/usr/lib/node_modules/bigbluebutton-analytics'
 
 try {
     if (!argv.deploy && !argv.username && !argv.password && !argv["add-user"]) {
-        console.log("Please provide atleast one argument")
+        const error = `
+Please provide atleast one option.
+        
+bbb-analytics [--deploy]
+bbb-analytics [--add-user --username=  --password=]
+        
+--deploy                  Deploy the bbb-analytics dashboard
+--add-user --username=    Create/Update usename for login
+           --password=    Create/Update password for login
+`
+        console.log(error)
         process.exit()
     }
     if (argv.deploy) {
