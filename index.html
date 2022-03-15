@@ -15,6 +15,11 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://bbb1.asyncweb.io/logo.png" width="30" height="30" alt="">
+        </a>
+    </nav>
     <div class="container" id="root"></div>
     <script type="text/babel">
         fetch("/analytics/data.json")
@@ -26,7 +31,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Class Name</th>
-                                <th scope="col">Meeting ID</th>
+                                <th scope="col"> Created At</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -35,7 +40,7 @@
                                 <tr key={i}>
                                     <th scope="row">{i + 1}</th>
                                     <td>{d.name}</td>
-                                    <td>{d.meetingId}</td>
+                                    <td>{d.createdOn}</td>
                                     <td><a href={`/learning-analytics-dashboard/?meeting=${d.meetingId}&report=${d.token}`} >View</a></td>
                                 </tr>
                             )}
