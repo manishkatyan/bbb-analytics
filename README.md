@@ -49,6 +49,8 @@ After succussfull installtion you should be able to access **https://<bbb.exampl
 <br />
 **password**: admin123
 
+**NOTE:** Be sure to change the password using the below command
+
 ```bash
 #To create or update username/password
 bbb-analytics --add-user --username=<username> --password=<password>
