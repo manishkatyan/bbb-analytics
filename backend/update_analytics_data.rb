@@ -1,25 +1,6 @@
 #!/usr/bin/ruby
 # encoding: UTF-8
 
-#
-# BigBlueButton open source conferencing system - http://www.bigbluebutton.org/
-#
-# Copyright (c) 2020 BigBlueButton Inc. and by respective authors (see below).
-#
-# This program is free software; you can redistribute it and/or modify it under
-# the terms of the GNU Lesser General Public License as published by the Free
-# Software Foundation; either version 3.0 of the License, or (at your option)
-# any later version.
-#
-# BigBlueButton is distributed in the hope that it will be useful, but WITHOUT
-# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
-# details.
-#
-# You should have received a copy of the GNU Lesser General Public License along
-# with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
-#
-
 require '../../core/lib/recordandplayback'
 require 'rubygems'
 require 'optparse'
@@ -64,12 +45,17 @@ begin
 path = '/var/bigbluebutton/learning-dashboard'
 meetingId = meeting_id
 token = Dir.glob("#{path}/#{meetingId}/*")[0].split('/').pop
-name = JSON.parse(File.read("#{path}/#{meetingId}/#{token}/learning_dashboard_data.json"))["name"]
+raw_data  = JSON.parse(File.read("#{path}/#{meetingId}/#{token}/learning_dashboard_data.json"))
+name = raw_data["name"]
+createdOn = raw_data["createdOn"]
+endedOn = raw_data["endedOn"]
 analyticsData = JSON.parse(File.read('/var/www/bigbluebutton-default/analytics/data.json'))
 data = {
     "name" => name,
     "meetingId" => meetingId,
-    "token" => token
+    "token" => token,
+    "createdOn" => createdOn,
+    "endedOn" => endedOn
 }
 analyticsData["analytics"].push(data)
 File.write('/var/www/bigbluebutton-default/analytics/data.json', analyticsData.to_json)
