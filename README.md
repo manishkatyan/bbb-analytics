@@ -45,11 +45,11 @@ bbb-analytics --deploy
 
 ```
 
-After succussfull installtion you should be able to access **https://<bbb.example.com/analytics/>**
+After succussfull installtion you should be able to access `https://<bbb.example.com/analytics/>`
 
 ### How to login
 
-When you visit the analytics URL - https://<bbb.example.com/analytics/> - you would be asked to enter username and password. Please use the default username and password mentioned below. 
+When you visit the analytics URL - `https://<bbb.example.com/analytics/>` - you would be asked to enter username and password. Please use the default username and password mentioned below. 
 
 ```bash
 username: admin
