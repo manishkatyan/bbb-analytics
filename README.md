@@ -3,6 +3,8 @@
 You can easily access analytics such as attendance, insights into usage of audio/video/chat and activity score of attendees during your BigBlueButton sessions.
 
 BONUS: You can also view all recordings!
+
+With analytics, we hope that you would be able to improve the quality of your online classes 🎉
   
 <a href="https://www.npmjs.com/package/bigbluebutton-analytics">
 <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/manishkatyan/bbb-analytics?label=npm&logo=npm">
@@ -63,10 +65,6 @@ password: admin123
 
 bbb-analytics --add-user --username=<username> --password=<password>
 ```
-
-<br/><br/>
-
-With analytics, we hope that you would be able to improve the quality of your online classes 🎉
 
 <br/><br/>
 
