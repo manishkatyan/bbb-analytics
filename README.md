@@ -16,7 +16,11 @@ Access analytics such as attendance, insights into usage of audio/video/chat and
 - **View all learning-dashboard data**
 - **Password protected**
 
-<br/>
+<br/><br/>
+
+<img style="width: 100%; height: auto;" src="https://higheredlab.com/wp-content/uploads/bigbluebutton-analytics.png" alt="bbb-class" /> <br/>
+
+<br/><br/>
 
 ## 🖐 Requirements
 A server with BigBlueButton 2.4.4 installed.
