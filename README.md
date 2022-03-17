@@ -26,7 +26,7 @@ With analytics, we hope that you would be able to improve the quality of your on
 
 <br/><br/>
 
-<img style="width: 100%; height: auto;" src="https://higheredlab.com/wp-content/uploads/bigbluebutton-analytics.png" alt="bbb-class" /> <br/>
+<img style="width: 100%; height: auto;" src="https://higheredlab.com/wp-content/uploads/bigbluebutton-analytics.gif" alt="bbb-class" /> <br/>
 
 <br/><br/>
 
