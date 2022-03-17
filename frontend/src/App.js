@@ -1,37 +1,48 @@
 import Tabels from "./components/table";
-import { Image, Layout, Menu, Space, Spin } from "antd";
+import { Image, Typography, Layout, Menu, Space, Spin } from "antd";
 import "./styles.css";
 import { useEffect, useState } from "react";
 import getData from './services/analytics.service'
 const { Header, Content, Footer } = Layout;
+const { Title, Text } = Typography;
 
 export default function App() {
   const [data, setData] = useState([])
+  const [sortBy, setSortBy] = useState('asce')
+  const changeSort = (direction) => {
+    setSortBy(direction)
+  }
   useEffect(async () => {
     const res = await getData()
-    setData(res)
+    let data = res.sort(function (a, b) {
+      if (sortBy === 'asce') {
+        return new Date(b.createdOn) - new Date(a.createdOn);
+      }
+      else {
+        return new Date(a.createdOn) - new Date(b.createdOn);
+      }
+    });
+    setData(data)
   }, [])
   return (
-    <Layout className="layout">
+    <Layout className="layout " >
 
-      <Menu theme="light" mode="horizontal">
-        <Menu.Item>
-          <Image preview={false} src="/logo.png" width={160} />
-        </Menu.Item>
-      </Menu>
-
-      <Content style={{
-        padding: '20px 5px'
-      }}>
+      <Content className="container-fluid px-5 ">
+        <div className="mt-4 mb-4">
+          <Title className="mb-1 pb-0 " level={3}>BigBlueButton Analytics</Title>
+          <Text className=" mt-0 pt-0 " >Access analytics of your BigBlueButton online classes</Text>
+        </div>
         < div className="App" >
-          {data && data.length ? <Tabels data={data} /> :
+          {data && data.length ? <div className="">
+            <Tabels data={data} selectSort={changeSort} />
+          </div> :
             <Space size="middle">
               <Spin size="large" />
             </Space>
           }
         </div>
       </Content >
-      <Footer style={{ textAlign: 'center' }}>Higheredlab ©2022 </Footer>
+      <Footer style={{ textAlign: 'center' }}><a href="https://higheredlab.com">HigherEdLab ©2022</a> </Footer>
     </Layout >
   );
 }

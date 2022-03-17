@@ -59,9 +59,11 @@ data = {
 }
 analyticsData["analytics"].push(data)
 File.write('/var/www/bigbluebutton-default/analytics/data.json', analyticsData.to_json)
+BigBlueButton.logger.info("Added data at data.json for  [#{meeting_id}] ")
 rescue => e
     BigBlueButton.logger.info("Rescued")
     BigBlueButton.logger.info(e.to_s)
+    
 end
 
 BigBlueButton.logger.info("Post Events for [#{meeting_id}] ends")

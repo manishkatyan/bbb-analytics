@@ -129,7 +129,7 @@ class Tabels extends React.Component {
         )
       },
     ];
-    return <Table rowKey="token" columns={columns} dataSource={this.props.data} pagination={{ pageSize: 20 }} scroll={{ y: 600 }} />;
+    return <Table rowKey="token" columns={columns} dataSource={this.props.data} pagination={{ pageSize: 20 }} scroll={{ y: 500 }} />;
   }
 }
 
