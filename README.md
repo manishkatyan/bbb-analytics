@@ -29,7 +29,8 @@ BONUS: You can also view all recordings!
 <br/><br/>
 
 ## 🖐 Requirements
-A server with BigBlueButton 2.4.4 installed.
+
+To view analytics, you would need a BigBlueButton 2.4.4 server.
 
 ## ⏳ Installation
 
@@ -56,7 +57,7 @@ After succussfull installtion you should be able to access **https://<bbb.exampl
 bbb-analytics --add-user --username=<username> --password=<password>
 ```
 
-Enjoy 🎉
+With analytics, we hope that you would be able to improve the quality of your online classes 🎉
 
 <br/>
 
