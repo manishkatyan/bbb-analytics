@@ -1,25 +1,15 @@
-<div align="center" width="150px">
-  <img style="width: 150px; height: auto;" src="https://higheredlab.com/wp-content/uploads/hel.png" alt="highered-strapi" />
-</div>
-<div align="center">
-  <h1>BigBlueButton-Analytics</h1>
-  <p>View all learning-dashboard</p>
-  <a href="https://www.npmjs.com/package/bigbluebutton-analytics">
-    <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/manishkatyan/bbb-analytics?label=npm&logo=npm">
-  </a>
-  <a href="https://www.npmjs.org/package/bigbluebutton-analytics">
-    <img src="https://img.shields.io/npm/dm/bbb-analytics.svg" alt="Monthly download on NPM" />
-  </a>
+# BigBlueButton-Analytics</h1>
+
+Access analytics such as attendance, insights into usage of audio/video/chat and activity score of attendees during your BigBlueButton sessions.
   
-</div>
+<a href="https://www.npmjs.com/package/bigbluebutton-analytics">
+<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/manishkatyan/bbb-analytics?label=npm&logo=npm">
+</a>
+<a href="https://www.npmjs.org/package/bigbluebutton-analytics">
+<img src="https://img.shields.io/npm/dm/bbb-analytics.svg" alt="Monthly download on NPM" />
+</a>
 
----
-
-<div style="margin: 20px 0" align="center">
-  <img style="width: 100%; height: auto;" src="assets/bbb-classes.png" alt="bigbluebutton-analytics" /> <br/>
-</div>
-
-<br/>
+<br/><br/>
 
 ## ✨ Features
 
