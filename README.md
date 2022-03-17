@@ -42,14 +42,14 @@ bbb-analytics --deploy
 
 ```
 
-
 After succussfull installtion you should be able to access **https://<bbb.example.com/analytics/>**
+
 ## default login details
 **username**: admin
 <br />
 **password**: admin123
 
-**NOTE:** Be sure to change the password using the below command
+> Be sure to change the password using the below command
 
 ```bash
 #To create or update username/password
@@ -62,4 +62,6 @@ Enjoy 🎉
 
 ## 📝 License
 
-[MIT License](LICENSE.md) Copyright (c) [Asyncweb](https://higheredlab.com/).
+[MIT License](LICENSE.md) 
+
+Copyright (c) [HigherEdLab.com](https://higheredlab.com/)
