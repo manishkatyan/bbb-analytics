@@ -60,8 +60,11 @@ password: admin123
 
 ```bash
 #To create or update username/password
+
 bbb-analytics --add-user --username=<username> --password=<password>
 ```
+
+<br/><br/>
 
 With analytics, we hope that you would be able to improve the quality of your online classes 🎉
 
