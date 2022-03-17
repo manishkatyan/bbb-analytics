@@ -15,8 +15,12 @@ BONUS: You can also view all recordings!
 
 ## ✨ Features
 
-- **View all learning-dashboard data**
-- **Password protected**
+- **Analytics**: Detailed insights into attendance, audio/video/chat usage and activity scores of attendees
+- **On-demand access**: Unlike the default BigBlueButton install, analytics is available even after the classes end
+- **Recordings**: View the recordings of all your BigBlueButton online classes as well
+- **Quick installation**:  Simply install BBB-Analytics npm package on your BigBlueButton sever
+- **Easy & Convenient**: Easily sort and search through records with paginations
+- **Secured**: password-protected page to prevent unauthorized access
 
 <br/><br/>
 
