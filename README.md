@@ -1,6 +1,8 @@
 # BigBlueButton-Analytics</h1>
 
-Access analytics such as attendance, insights into usage of audio/video/chat and activity score of attendees during your BigBlueButton sessions.
+You can easily access analytics such as attendance, insights into usage of audio/video/chat and activity score of attendees during your BigBlueButton sessions.
+
+BONUS: You can also view all recordings!
   
 <a href="https://www.npmjs.com/package/bigbluebutton-analytics">
 <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/manishkatyan/bbb-analytics?label=npm&logo=npm">
