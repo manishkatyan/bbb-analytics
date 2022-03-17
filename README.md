@@ -32,6 +32,8 @@ BONUS: You can also view all recordings!
 
 To view analytics, you would need a BigBlueButton 2.4.4 server.
 
+<br/><br/>
+
 ## ⏳ Installation
 
 ```bash
@@ -45,12 +47,16 @@ bbb-analytics --deploy
 
 After succussfull installtion you should be able to access **https://<bbb.example.com/analytics/>**
 
-## default login details
-**username**: admin
-<br />
-**password**: admin123
+### How to login
 
-> Be sure to change the password using the below command
+When you visit the analytics URL - https://<bbb.example.com/analytics/> - you would be asked to enter username and password. Please use the default username and password mentioned below. 
+
+```bash
+username: admin
+password: admin123
+```
+
+> **Don't forget to change your password** using the command below:
 
 ```bash
 #To create or update username/password
@@ -59,7 +65,7 @@ bbb-analytics --add-user --username=<username> --password=<password>
 
 With analytics, we hope that you would be able to improve the quality of your online classes 🎉
 
-<br/>
+<br/><br/>
 
 ## 📝 License
 
