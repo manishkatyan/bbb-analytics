@@ -10,7 +10,7 @@ With analytics, we hope that you would be able to improve the quality of your on
 <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/manishkatyan/bbb-analytics?label=npm&logo=npm">
 </a>
 <a href="https://www.npmjs.org/package/bigbluebutton-analytics">
-<img src="https://img.shields.io/npm/dm/bbb-analytics.svg" alt="Monthly download on NPM" />
+<img src="https://img.shields.io/npm/dm/bigbluebutton-analytics.svg" alt="Monthly download on NPM" />
 </a>
 
 <br/><br/>
