@@ -61,6 +61,7 @@ password: admin123
 > **Don't forget to change your password** using the command below:
 
 ```bash
+
 #To create or update username/password
 
 bbb-analytics --add-user --username=<username> --password=<password>
