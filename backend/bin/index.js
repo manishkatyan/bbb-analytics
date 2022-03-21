@@ -29,7 +29,7 @@ bbb-analytics [--add-user --username=  --password=]
 
     if (argv["add-user"]) {
         if (argv.username && argv.password) {
-            excuteCmd([`${PATH}/bin/utils/create_or_update_user.sh', ${argv.username}, ${argv.password}`])
+            excuteCmd([`${PATH}/bin/utils/create_or_update_user.sh, ${argv.username}, ${argv.password}`])
 
         }
         else {
