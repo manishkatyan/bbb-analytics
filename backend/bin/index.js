@@ -17,7 +17,7 @@ bbb-analytics [--deploy]
 bbb-analytics [--add-user --username=  --password=]
         
 --deploy                  Deploy the bbb-analytics dashboard
---add-user --username=    Create/Update usename for login
+--add-user --username=    Create/Update username for login
            --password=    Create/Update password for login
 `
         console.log(error)
