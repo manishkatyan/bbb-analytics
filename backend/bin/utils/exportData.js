@@ -16,9 +16,12 @@ fs.readdirSync(ANALYTICS_FOLDER_PATH).filter(function (meetingId) {
 
             const name = raw_data.name
 
-            const createdOn = new Date(raw_data.createdOn).toLocaleString()
+            // const createdOn = new Date(raw_data.createdOn).toLocaleString()
 
-            const endedOn = new Date(raw_data.endedOn).toLocaleString()
+            // const endedOn = new Date(raw_data.endedOn).toLocaleString()
+            const createdOn = raw_data.createdOn
+
+            const endedOn = raw_data.endedOn
 
             data.analytics.push({ name, createdOn, endedOn, token: token[0], meetingId })
         }

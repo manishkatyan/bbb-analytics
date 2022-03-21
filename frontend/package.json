@@ -1,6 +1,6 @@
 {
   "name": "bigbluebutton-analytics",
-  "version": "1.0.1",
+  "version": "1.1.16",
   "homepage": "/analytics",
   "description": "BigBlueButton Analytics",
   "main": "src/index.js",

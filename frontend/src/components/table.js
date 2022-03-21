@@ -124,12 +124,22 @@ class Tabels extends React.Component {
         dataIndex: 'createdOn',
         key: 'createdOn',
         sorter: (a, b) => new Date(b.createdOn) - new Date(a.createdOn),
-        sortDirections: ['descend']
+        sortDirections: ['descend'],
+        render: (text) => (
+          <Space size="middle" key={text.toString()}>
+            {new Date(text).toLocaleString()}
+          </Space>
+        )
       },
       {
         title: 'End Date',
         dataIndex: 'endedOn',
         key: 'endedOn',
+        render: (text) => (
+          <Space size="middle" key={text.toString()}>
+            {new Date(text).toLocaleString()}
+          </Space>
+        )
       },
       {
         title: 'Action',

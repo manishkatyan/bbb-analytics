@@ -11,9 +11,10 @@ export default function App() {
   useEffect(async () => {
     const res = await getData()
     let soretdData = res.sort(function (a, b) {
-      return new Date(b.createdOn) - new Date(a.createdOn);
+      return b.createdOn - a.createdOn;
     });
     setData(soretdData)
+
   }, [])
   return (
 
