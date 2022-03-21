@@ -32,7 +32,7 @@ export default function App() {
           </Space>
         }
       </div>
-      <Footer style={{ textAlign: 'center' }}><a href="https://higheredlab.com">HigherEdLab ©2022</a> </Footer>
+      <Footer style={{ textAlign: 'center' }}><a href="https://higheredlab.com">HigherEdLab.com ©2022</a> </Footer>
 
     </div >
   );
