@@ -18,31 +18,25 @@ else
 fi
 
 
-# Add post_event script
-if [  ! -f $POST_EVENT_SCRIPT ]; then
-    sudo cp -r $ROOT_PATH/update_analytics_data.rb  $POST_EVENT_SCRIPT
-    echo "Adding post_event script"
-fi
-
 # Add nginx config script
-if [  ! -f $NGINX_CONFIG ]; then
-    cat << EOF > $NGINX_CONFIG
+cat << EOF > $NGINX_CONFIG
         location /analytics {
             auth_basic "Restricted Content";
             auth_basic_user_file /etc/nginx/.htpasswd;
             root /var/www/bigbluebutton-default/;
         }
 EOF
-     echo "Adding nginx-config"
-     echo "reloading the nginx"
-     nginx -t && nginx -s reload
+echo "Adding nginx-config"
+echo "reloading the nginx"
+nginx -t && nginx -s reload
 
-fi
+
 
 #Deploy bbb-analytics
 if [  -f $BIGBLUEBUTTON ]; then 
     sudo mkdir -p /var/www/bigbluebutton-default/analytics
-    sudo  cp -r $ROOT_PATH/static/* /var/www/bigbluebutton-default/analytics
+    sudo cp -r $ROOT_PATH/static/* /var/www/bigbluebutton-default/analytics
+    sudo cp -r $ROOT_PATH/update_analytics_data.rb  $POST_EVENT_SCRIPT
     node $ROOT_PATH/bin/utils/exportData.js
     sudo chown -R bigbluebutton:bigbluebutton /var/www/bigbluebutton-default/analytics
     echo "Installation done."
