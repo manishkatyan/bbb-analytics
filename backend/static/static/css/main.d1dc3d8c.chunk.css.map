@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/styles.css"],"names":[],"mappings":"AAEA,KACE,sBAAuB,CACvB,iBACF","file":"main.d1dc3d8c.chunk.css","sourcesContent":["@import '~antd/dist/antd.css';\n\n.App {\n  font-family: sans-serif;\n  text-align: center;\n}"]}
