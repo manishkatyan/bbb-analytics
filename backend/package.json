@@ -1,0 +1,39 @@
+{
+  "name": "bigbluebutton-analytics",
+  "version": "1.1.10",
+  "description": "BigBlueButton Analytics",
+  "main": ".eslintrc.js",
+  "bin": {
+    "bbb-analytics": "./bin/index.js"
+  },
+  "scripts": {},
+  "author": {
+    "name": "HigherEdLab.com",
+    "email": "support@higheredlab.com",
+    "url": "https://higheredlab.com/"
+  },
+  "homepage": "https://github.com/manishkatyan/bbb-strapi#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manishkatyan/bbb-strapi.git"
+  },
+  "maintainers": [
+    {
+      "name": "HigherEdLab.com",
+      "email": "support@higheredlab.com",
+      "url": "https://higheredlab.com/"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^10.0.1",
+    "yargs": "^17.3.1"
+  },
+  "keywords": [
+    "dashboard",
+    "analytics",
+    "learning-dashboard",
+    "bigbluebutton-analytics",
+    "bigbluebtton"
+  ]
+}

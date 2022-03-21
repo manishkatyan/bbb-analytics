@@ -42,9 +42,9 @@ fi
 #Deploy bbb-analytics
 if [  -f $BIGBLUEBUTTON ]; then 
     sudo mkdir -p /var/www/bigbluebutton-default/analytics
-    sudo  cp -r $ROOT_PATH/index.html $ROOT_PATH/data.json /var/www/bigbluebutton-default/analytics
-    sudo cp -r  /var/www/bigbluebutton-default/favicon.ico  /var/www/bigbluebutton-default/analytics/
+    sudo  cp -r $ROOT_PATH/static/* /var/www/bigbluebutton-default/analytics
     node $ROOT_PATH/bin/utils/exportData.js
+    sudo chown -R bigbluebutton:bigbluebutton /var/www/bigbluebutton-default/analytics
     echo "Installation done."
     echo "You can access analytics-dashboard at https://<your-bbb>/analytics"
     exit 0
