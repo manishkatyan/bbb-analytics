@@ -12,10 +12,10 @@
     "email": "support@higheredlab.com",
     "url": "https://higheredlab.com/"
   },
-  "homepage": "https://github.com/manishkatyan/bbb-strapi#readme",
+  "homepage": "https://github.com/manishkatyan/bbb-analytics#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/manishkatyan/bbb-strapi.git"
+    "url": "https://github.com/manishkatyan/bbb-analytics.git"
   },
   "maintainers": [
     {
