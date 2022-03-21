@@ -11,7 +11,7 @@ let PATH = '/usr/lib/node_modules/bigbluebutton-analytics'
 try {
     if (!argv.deploy && !argv.username && !argv.password && !argv["add-user"]) {
         const error = `
-Please provide atleast one option.
+bbb-analytics utility.
         
 bbb-analytics [--deploy]
 bbb-analytics [--add-user --username=  --password=]
@@ -29,7 +29,7 @@ bbb-analytics [--add-user --username=  --password=]
 
     if (argv["add-user"]) {
         if (argv.username && argv.password) {
-            excuteCmd(['./bin/utils/create_or_update_user.sh', argv.username, argv.password])
+            excuteCmd([`${PATH}/bin/utils/create_or_update_user.sh', ${argv.username}, ${argv.password}`])
 
         }
         else {

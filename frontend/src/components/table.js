@@ -61,34 +61,33 @@ class Tabels extends React.Component {
         setTimeout(() => this.searchInput.select(), 100);
       }
     },
-    render: text =>
+    render: text => {
       this.state.searchedColumn === dataIndex ? (
         <Highlighter
-          highlightStyle={{ backgroundColor: '#ffc069', padding: 0 }}
+          highlightStyle={{ backgroundColor: 'blue', padding: 0 }}
           searchWords={[this.state.searchText]}
           autoEscape
           textToHighlight={text ? text.toString() : ''}
         />
       ) : (
         text
-      ),
+      )
+    }
   });
 
-  renderAction = dataIndex => ({
-
-  })
-
   handleSearch = (selectedKeys, confirm, dataIndex) => {
+    console.log(dataIndex)
     confirm();
     this.setState({
       searchText: selectedKeys[0],
       searchedColumn: dataIndex,
     });
+    console.log(selectedKeys[0])
   };
 
   handleReset = clearFilters => {
     clearFilters();
-    this.setState({ searchText: '' });
+    this.setState({ searchText: null });
   };
 
   render() {
@@ -100,9 +99,21 @@ class Tabels extends React.Component {
         width: '35%',
         fixed: 'left',
         ...this.getColumnSearchProps('name'),
-        render: (text, record) => (
+
+        render: (text, record, dataIndex) => (
           <span key={record.token.toString()}>
-            <Text className='mb-2' >{text}</Text >
+            {
+              this.state.searchedColumn === dataIndex ? (
+                <Highlighter
+                  highlightStyle={{ backgroundColor: 'blue', padding: 0 }}
+                  searchWords={[this.state.searchText]}
+                  autoEscape
+                  textToHighlight={text ? text.toString() : ''}
+                />
+              ) : (
+                text
+              )
+            }
             <br />
             <Text className='d-sm-none d-md-block d-none p-0 m-0 text-muted' >{record.meetingId}</Text>
           </span>
@@ -112,6 +123,8 @@ class Tabels extends React.Component {
         title: 'Start Date',
         dataIndex: 'createdOn',
         key: 'createdOn',
+        sorter: (a, b) => new Date(b.createdOn) - new Date(a.createdOn),
+        sortDirections: ['descend']
       },
       {
         title: 'End Date',
@@ -129,7 +142,7 @@ class Tabels extends React.Component {
         )
       },
     ];
-    return <Table rowKey="token" columns={columns} dataSource={this.props.data} pagination={{ pageSize: 20 }} scroll={{ y: 500 }} />;
+    return <Table rowKey="token" columns={columns} dataSource={this.props.data} scroll={{ y: 500 }} />;
   }
 }
 
