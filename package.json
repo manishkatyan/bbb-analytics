@@ -1,0 +1,36 @@
+{
+  "name": "bigbluebutton-analytics",
+  "version": "1.1.9",
+  "description": "BigBlueButton Analytics",
+  "main": ".eslintrc.js",
+  "bin": {
+    "bbb-analytics": "./bin/index.js"
+  },
+  "scripts": {},
+  "author": {
+    "name": "HigherEdLab.com",
+    "email": "support@higheredlab.com",
+    "url": "https://higheredlab.com/"
+  },
+  "homepage": "https://github.com/manishkatyan/bbb-analytics#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manishkatyan/bbb-analytics.git"
+  },
+  "maintainers": [
+    {
+      "name": "HigherEdLab.com",
+      "email": "support@higheredlab.com",
+      "url": "https://higheredlab.com/"
+    }
+  ],
+  "keywords": [
+    "bigbluebutton-analytics",
+    "bigbluebtton"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^10.0.1",
+    "yargs": "^17.3.1"
+  }
+}
