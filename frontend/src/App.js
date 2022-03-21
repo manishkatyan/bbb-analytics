@@ -24,7 +24,7 @@ export default function App() {
       </div>
       < div className="App" >
         {data && data.length ?
-          <div className="rounded shadow mb-4 px-1">
+          <div className="rounded  mb-4 ">
             <Tabels data={data} />
           </div> :
           <Space size="middle">
