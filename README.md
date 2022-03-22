@@ -47,7 +47,7 @@ bbb-analytics --deploy
 
 ```
 
-After succussfull installtion you should be able to access `https://<bbb.example.com/analytics/>`
+After successful installtion you should be able to access `https://<bbb.example.com/analytics/>`
 
 ### How to login
 

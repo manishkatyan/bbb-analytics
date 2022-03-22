@@ -9,6 +9,11 @@ if [[ $(id -u) -ne 0 ]] ; then
     echo "Please run as root" ; exit 1 ;
 fi
 
+if  ! which htpasswd > /dev/null; then
+    echo "Installing apache2-utils"
+    sudo apt-get install -y apache2-utils
+fi
+
 #set default user and password
 if [ ! -f $HTPASSED ]; then
     sudo touch $HTPASSED
