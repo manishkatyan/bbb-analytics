@@ -66,8 +66,16 @@ password: admin123
 bbb-analytics --add-user --username=<username> --password=<password>
 ```
 
-<br/><br/>
+## [BigBlueButton Tech Support](https://higheredlab.com/bigbluebutton-support/)
+### Are you facing difficulties with your BigBlueButton server?
+Lean on our expertise to smoothly run your BigBlueButton server. We can: 
+1. troubleshoot your BigBlueButton servers to improve audio and video performance,
+1. install additional features such as streaming, mp4 recordings and attendance, and
+1. provide managed BigBlueButton servers, starting at $12 per month
 
+[Click here to learn more](https://higheredlab.com/bigbluebutton-support/)
+
+<br/><br/>
 ## 📝 License
 
 [MIT License](LICENSE.md) 
